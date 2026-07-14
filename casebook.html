@@ -325,17 +325,6 @@ src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
     leadFired = true;
     console.log('Lead event fired!');
     if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-    document.querySelector('.cb-card').innerHTML = 
-      '<div style="text-align:center;padding:40px 0;">' +
-        '<div style="width:56px;height:56px;border-radius:50%;background:var(--accent-lt);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:24px;color:var(--blue);">✓</div>' +
-        '<h2 style="font-size:20px;font-weight:700;color:var(--navy-dark);margin-bottom:12px;">ありがとうございます</h2>' +
-        '<p style="font-size:14px;color:var(--body);line-height:1.8;margin-bottom:24px;">' +
-          'ご入力いただいたメールアドレス宛に、<br>AI活用事例集をお送りします。' +
-        '</p>' +
-        '<a href="https://lp.airich.jp/" style="display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-size:14px;font-weight:500;text-decoration:none;">' +
-          '← AI Rich Studio サービスサイトを見る' +
-        '</a>' +
-      '</div>';
   }
 
   // iframeの初期高さを記録し、大幅に縮んだら送信完了と判断
