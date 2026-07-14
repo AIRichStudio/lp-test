@@ -1397,11 +1397,14 @@ section { padding: 80px 0; }
 
 .company-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 40px;
   margin-top: 44px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media(max-width: 680px) { .company-layout { grid-template-columns: 1fr; gap: 28px; } }
+@media(max-width: 680px) { .company-layout { max-width: 100%; } }
 
 .company-table {
   background: rgba(255,255,255,0.04);
@@ -1904,6 +1907,23 @@ footer {
   .nav-cta { padding: 7px 14px; font-size: 12px; }
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1436797771804684');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -1916,6 +1936,7 @@ footer {
     <a href="#strengths" class="nav-link">強み</a>
     <a href="#services" class="nav-link">サービス</a>
     <a href="#track-record" class="nav-link">実績</a>
+    <a href="casebook.html" class="nav-cta-casebook" target="_blank" rel="noopener">AI活用事例集ダウンロード</a>
     <a href="#request-form" class="nav-cta">資料請求・無料相談はこちら</a>
   </div>
 </nav>
@@ -2117,7 +2138,7 @@ footer {
         <div class="strength-num">01</div>
         <div class="strength-icon-wrap"></div>
         <h3 class="strength-h3">「提案」だけでなく<br>「実装」まで責任を持つ</h3>
-        <p class="strength-body">AI活用の戦略策定から実行までを担うRelic（新規事業開発国内No.1）と、AIシステムの開発・構築を得意とするDELTAが一緒に立ち上げた会社です。「計画だけ作って終わり」ではなく、現場で動くシステムを作るところまで一社でお任せいただけます。</p>
+        <p class="strength-body">AI活用の戦略策定から実行まで、「計画だけ作って終わり」ではなく、現場で動くシステムを作るところまで一社でお任せいただけます。</p>
       </div>
       <div class="strength-card reveal">
         <div class="strength-num">02</div>
@@ -2171,7 +2192,7 @@ footer {
     <div class="svc-grid three reveal">
       <div class="service-card">
         <div class="service-tag">STEP 1</div>
-        <h3 class="service-h3">AI活用診断・<br>戦略設計</h3>
+        <h3 class="service-h3">AI活用診断・戦略設計</h3>
         <p class="service-body">現状業務を整理し、AI活用余地と優先テーマを明確にします。</p>
         <ul class="service-list">
           <li>現状分析・AI活用診断</li>
@@ -2181,7 +2202,7 @@ footer {
       </div>
       <div class="service-card">
         <div class="service-tag">STEP 2</div>
-        <h3 class="service-h3">AIチャンピオン<br>育成プログラム</h3>
+        <h3 class="service-h3">AIチャンピオン育成プログラム</h3>
         <p class="service-body">業務分解、改善ループ設計、AIツール活用、データ構造化を実務ベースで育成します。</p>
         <ul class="service-list">
           <li>ワークショップ</li>
@@ -2191,7 +2212,7 @@ footer {
       </div>
       <div class="service-card">
         <div class="service-tag">STEP 3</div>
-        <h3 class="service-h3">導入伴走<br>（月次）</h3>
+        <h3 class="service-h3">導入伴走（月次）</h3>
         <p class="service-body">現場導入、KPIレビュー、改善提案、社内定着まで支援します。</p>
         <ul class="service-list">
           <li>週1回定例ミーティング</li>
@@ -2353,18 +2374,6 @@ footer {
           <div class="company-row">
             <div class="company-th">事業内容</div>
             <div class="company-td">AI研修サービス、AI事業開発・DX支援、AI技術支援</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 関連企業 -->
-      <div class="reveal">
-        <div class="related-label">Related Companies</div>
-        <div class="related-companies">
-          <div class="related-card">
-            <div class="related-name">株式会社Relic</div>
-            <div class="related-ceo">代表取締役CEO/Founder：北嶋 貴朗</div>
-            <div class="related-desc">新規事業開発を、構想で終わらせず、収益化・成長・出口戦略まで共に背負ってやり切る「事業共創カンパニー」。AI研修事業にも取り組み、研修だけに留まらずAIの導入設計から現場への実装・定着まで一貫して支援。AI Rich Studioの事業戦略設計とビジネス開発を担う。</div>
           </div>
         </div>
       </div>
