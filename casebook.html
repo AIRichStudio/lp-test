@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI活用事例集を無料でダウンロード。業種別・規模別のAI導入事例を多数掲載。AI Rich Studioの支援実績をご覧ください。">
+<meta name="robots" content="noindex">
+<title>AI活用事例集 無料ダウンロード | AI Rich Studio</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAHuElEQVR4nJ1Xa2xUxxX+zszdu7vel+14MY4hNg5QGipUi6RSAhWmaSGAaKqkayUiVaUmKE1RS4sCNOWxu6F1BU2iJk1ICVUjtUpb7UZNFDUkoEiGtqRVi5s+sCsbBwgUjB8Y7/tx78zpD9t4F9tgONLu1b0z98x3vvPdM2eAmzdaEW43ph5iCsVi8hZ8zsxKnTOz56UD59ft2nP26R0/Orvpl787d48U46MxGQ6zmNpLudFMJoXDLKJRACDNzHLfy2ce7+5V25NpR5OlBZgIpsxhVpX+4O5m97PfeLThTwCwYkW7cfRoiyIiviUA4XBYdHVFKB4nJQXwwoGP13d1691Dw867U+kcFBeUJGJmAmuWhrOCAh6FOXOMN764HHvW3N/UDQArwu3GsWiLAiYDmRIAM1NLy1F57NhKGwBiv+/73J//kY5cvERr0hmCVjkliIkZZTQTkVKahcvtI683n7lzruOVbZuCz/n9/kEACIVYxuOkrgtglG7SAHDsr33z/vBuevu5fvVEMm1Kq5DWUgIATZ9fAsCslBbS4w2g0pe+sKDR1bZjS+MviKh4XQbC4bCIRqOauccf2Wd+9/Qn+S2JlDuQKSQhBJTQmLHCCcwMUhoOw+9zI3ib9a9F842dmzc2vBuJgMaDvApgPPIX9vd+oatbH7x42WiyCjkYgm0GGzytjG4AhKBtpS2w21k/twYL7+h7eeeWxd/ePRasAEZzHo2Cjx/vm8WOijfrGmY1BfxFi9liW7ExiaoZMQAAUJYN4XJXOutqdaq2eiDyyIN1OzVPfKIEALFYTLa2tqq33u+/r2/YdbxQyCuCkJf6CzjVm8SVK0UIIWBIAuuZLM/aVoBpeoXPW8Sc283Xt34z+P259b6B7W2nNxaL+fX7dn36K0SkyyqaYWhbKZstiwVJjdl1JmqCQZz/XwZnetPIZDRIQAtBLMCCQSXEMBPANoOFcMvbqh0IBgtHljUHtmwI1XU23H561eNbutv+2+tZ6pbpHtMxqoEyNSsFIiIiMIgBq8gAa8xrdGPZ8iAWLPQgEHAL6fBIC5KUgtYMpTRrpYmY3MIXqJSNc/ify5aKNa+2fWo1uVlveqb7veMddPjMeV6aSiaUNJC9GvSU+SMCaCLvVhEwJOvm5lphUuq5v/398h2pjPFAruDwKyUgiCBE3qquov801Nk/D29beHD4SrLm3IXe1955J7VxJOOAXUhpKUkr6TKYSI47nxIAo7xmEQFKgxkCNZWy/dWffObQhx8N1Z84UWi8cjld6XS5ik2Ns849+lCwGwB2/PD0rm9tv7RtJO3w5rNZCFlUQpBkZggGUKKjqRkY/7sGBGuFdE47gJi8r7nmAoALpe998OFQ/dtvj7x1ssd5TyqdA4mCLSUZwET9IKayvE8CwMyTGBhlhYRt51BVbZ0FWlV7e7uxf3CQ7+oMUV9fBx1oa3Q/tXfg8CcXvYvt/GVLShgMmuyfuDSuyQBoXNhlDLAyzQoyRaZn9fL+LoBp5UqyASAUisl4vNX213fuvTToW6ytRFFKMqerWwxAl1AwTWOBMvq1Zvj8PuE3cz8jWqpePARz2M2qBUBLC1RHx0Dd8wcHnkxn09oQcFyvVghQWVGb5isYyzkDYKgKt08aPPBGaF3tKwCweS0KABAdm7/n+Z4HCpavQiCpwCTK0E8yDVGShTIAQpMgAKwZEDQ2HUKKvHJIhzz420txKcnNEP0ulzzlrRAdX74/cGxruLtJKcFgMF93cQAsAUxgNACgszPEABCsFEPnBywbJK6qVhAok1NSk/cRwAO2NIgIxSwhlSng9fhQj+FyUi6bIaIb7JYEZiJtmJxTGgDCwgCAaJQ0MxMQ+fjkmadOsvB/Nl9I2ihRcTYzooiImZnGrtDMwlPhWZgrWrDsBJymQTzNtkkAlGbl8Zjm7BrriNZAOBwRV/UYj8cFUVTPCtIzbqeGEKbBzPaYEkBEEoBRcjUECaFUXiurqEe3hekWZ1YaljQqzZrqxOmvPex9CcwUiUBdBdDa2qrCzOLBL9W+H/AkNvi9NOjxVhrMgphZTel51L2g8tpStjAzbJsd5PEFHE0NhRMPrfOuWrSofigciRARcZkIo0Q6FovJr66r/01Hx+DRnouZHwgtn1DwO7PZhCYCEyBv1JsQAI3RtqzC4zOq/bkL8+5Ubbs3L3iNiOzStm/KPiMWY9naOto8/vEvw0vO9Yvdmax8WGkDuVxSMTEBJJgB0xToPZXBya4EnA4BZihbszDdPgp4CqkFDY79W0cb0yFgou0rBTulMTPF4xDjQA4dHlo1mKKdeeX+fDZXhLLyNoOlaRo0CmBEG4IgHT4R8BQxd67x6xX3Ys/6VfNPAeOt+UqFa4QybSUcO0yo8RPO2tV0RAgcefO9oa9fIbHD5qoFyVQKYG1rImJyy0ClA7XV+si9S1zPPvZY4/HnUHY4sadL14xsNC3QADFzvzd2yPGdRFJ/T0h/zb9PDiMxkvioeYnrx08/2RC3FYBQTIbv6uRSuqcN9mZ+4ZKDaVfXQN2vYoMb9v60dy3zuKBDMhSKyZvweWtWUiwnnl3nvDKtn/mzZwfhBZAee+ItGU2X3KevGQPgctWIKmeVyOfyXMhf1lmR5Ru+V7pOGvg/6Wq4afOO4/0AAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- HubSpot form embed script -->
+<script src="https://js-na2.hsforms.net/forms/embed/246440621.js" defer></script>
+
+<style>
+:root {
+  --blue:       #5B5BD6;
+  --blue-lt:    #7B7EE8;
+  --blue-pale:  #A5A8F0;
+  --navy-dark:  #0D1340;
+  --navy:       #111640;
+  --bg:         #F5F7FF;
+  --bg2:        #EEF1FF;
+  --surface:    #ffffff;
+  --text:       #0D1340;
+  --body:       #3a4070;
+  --muted:      #8b8fb0;
+  --border:     rgba(91,91,214,0.15);
+  --border2:    rgba(91,91,214,0.08);
+  --accent:     #5B5BD6;
+  --accent-lt:  rgba(91,91,214,0.1);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans JP', 'DM Sans', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HEADER ── */
+.cb-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border2);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.cb-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--navy-dark);
+}
+.cb-logo img { height: 28px; }
+.cb-logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.cb-back {
+  font-size: 13px;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.2s;
+}
+.cb-back:hover { opacity: 0.7; }
+.cb-back::before {
+  content: '←';
+  font-size: 14px;
+}
+
+/* ── MAIN ── */
+.cb-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 28px;
+}
+
+.cb-card {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(91,91,214,0.08);
+  max-width: 520px;
+  width: 100%;
+  padding: 48px 40px;
+}
+
+.cb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--blue);
+  background: var(--accent-lt);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+.cb-badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+
+.cb-title {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--navy-dark);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.cb-desc {
+  font-size: 14px;
+  color: var(--body);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* ── HUBSPOT FORM AREA ── */
+.cb-form-area {
+  min-height: 300px;
+}
+
+/* HubSpot form style overrides */
+.cb-form-area .hs-form-field { margin-bottom: 16px; }
+.cb-form-area .hs-form-field label {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--navy-dark) !important;
+  margin-bottom: 6px !important;
+  display: block !important;
+}
+.cb-form-area .hs-input {
+  width: 100% !important;
+  height: 48px !important;
+  padding: 12px 16px !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  font-family: 'Noto Sans JP', sans-serif !important;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  transition: border-color 0.2s !important;
+  box-sizing: border-box !important;
+}
+.cb-form-area .hs-input:focus {
+  outline: none !important;
+  border-color: var(--blue) !important;
+  box-shadow: 0 0 0 3px rgba(91,91,214,0.12) !important;
+}
+.cb-form-area .hs-submit {
+  margin-top: 24px;
+}
+.cb-form-area .hs-button {
+  width: 100% !important;
+  height: 52px !important;
+  background: var(--blue) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  font-family: 'Noto Sans JP', sans-serif !important;
+  cursor: pointer !important;
+  transition: background 0.2s, transform 0.2s !important;
+  letter-spacing: 0.02em !important;
+}
+.cb-form-area .hs-button:hover {
+  background: var(--blue-lt) !important;
+  transform: translateY(-1px) !important;
+}
+.cb-form-area .hs-error-msgs {
+  font-size: 12px !important;
+  color: #e53e3e !important;
+  margin-top: 4px !important;
+}
+/* Hide HubSpot branding */
+.cb-form-area .hs-form .legal-consent-container { font-size: 12px !important; color: var(--muted) !important; }
+
+/* Fallback form (shown until HubSpot loads or as placeholder) */
+.cb-fallback-note {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  font-size: 13px;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+}
+.cb-fallback-note code {
+  display: block;
+  margin-top: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--blue);
+}
+
+/* ── FOOTER ── */
+.cb-footer {
+  text-align: center;
+  padding: 24px 28px;
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid var(--border2);
+}
+.cb-footer a {
+  color: var(--blue);
+  text-decoration: none;
+}
+.cb-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .cb-card {
+    padding: 36px 24px;
+    border-radius: 16px;
+  }
+  .cb-title { font-size: 20px; }
+  .cb-main { padding: 32px 16px; }
+}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1436797771804684');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="cb-header">
+  <a href="https://lp.airich.jp/" class="cb-logo">
+    <img src="data:image/png;base64,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" alt="AI Rich Studio">
+    <span class="cb-logo-text">AI Rich Studio</span>
+  </a>
+  <a href="https://lp.airich.jp/" class="cb-back">サービスサイトへ</a>
+</header>
+
+<!-- MAIN -->
+<main class="cb-main">
+  <div class="cb-card">
+    <div class="cb-badge">
+      <span class="cb-badge-dot"></span>
+      FREE DOWNLOAD
+    </div>
+
+    <h1 class="cb-title">AI活用事例集を<br>無料でお届けします</h1>
+
+    <p class="cb-desc">
+      業種別・規模別のAI導入事例を多数掲載。<br>
+      以下のフォームにご入力いただくと、<br>
+      メールにて事例集をお送りします。
+    </p>
+
+    <!-- HubSpot Form -->
+    <div class="cb-form-area" id="hubspotFormArea">
+      <div class="hs-form-frame" data-region="na2" data-form-id="a9b89c5a-0128-4daa-b87a-b1cbe6ea5419" data-portal-id="246440621"></div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="cb-footer">
+  <a href="https://lp.airich.jp/">AI Rich Studio サービスサイト</a>
+  &nbsp;|&nbsp;
+  <a href="https://airichstudio.github.io/privacy_policy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+  <br>
+  <span style="margin-top:6px;display:inline-block;">© AI Rich Studio（SEVENRICH GROUP）</span>
+</footer>
+
+<script>
+// HubSpotフォーム送信検知 + Meta Pixel Lead event
+// hs-form-frame方式はmessageを親に送信しないため、
+// iframeの高さ変化で送信完了を検知する
+(function() {
+  var leadFired = false;
+  var formArea = document.getElementById('hubspotFormArea');
+  if (!formArea) return;
+
+  function fireLead() {
+    if (leadFired) return;
+    leadFired = true;
+    console.log('Lead event fired!');
+    if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+    document.querySelector('.cb-card').innerHTML = 
+      '<div style="text-align:center;padding:40px 0;">' +
+        '<div style="width:56px;height:56px;border-radius:50%;background:var(--accent-lt);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:24px;color:var(--blue);">✓</div>' +
+        '<h2 style="font-size:20px;font-weight:700;color:var(--navy-dark);margin-bottom:12px;">ありがとうございます</h2>' +
+        '<p style="font-size:14px;color:var(--body);line-height:1.8;margin-bottom:24px;">' +
+          'ご入力いただいたメールアドレス宛に、<br>AI活用事例集をお送りします。' +
+        '</p>' +
+        '<a href="https://lp.airich.jp/" style="display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-size:14px;font-weight:500;text-decoration:none;">' +
+          '← AI Rich Studio サービスサイトを見る' +
+        '</a>' +
+      '</div>';
+  }
+
+  // iframeの初期高さを記録し、大幅に縮んだら送信完了と判断
+  var initialHeight = 0;
+  var checkCount = 0;
+
+  setInterval(function() {
+    if (leadFired) return;
+    var iframe = formArea.querySelector('iframe');
+    if (!iframe) return;
+
+    var h = iframe.offsetHeight || iframe.clientHeight;
+    
+    // 初期高さを記録（フォームが読み込まれた後）
+    if (h > 200 && initialHeight === 0) {
+      initialHeight = h;
+      checkCount++;
+    }
+    
+    // 初期高さが記録され、高さが大幅に縮んだ場合 = サンクスメッセージに切り替わった
+    if (initialHeight > 0 && h > 0 && h < initialHeight * 0.6 && checkCount > 0) {
+      fireLead();
+    }
+  }, 500);
+})();
+</script>
+
+</body>
+</html>
