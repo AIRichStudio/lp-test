@@ -145,6 +145,43 @@ body {
   margin-bottom: 32px;
 }
 
+/* ── Thumbnail Stack ── */
+.cb-thumbnails {
+  margin-bottom: 28px;
+}
+.cb-thumb-stack {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cb-thumb {
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+.cb-thumb-back {
+  width: 55%;
+  left: 8%;
+  transform: rotate(-4deg);
+  z-index: 1;
+}
+.cb-thumb-front {
+  width: 55%;
+  right: 8%;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .cb-thumb-stack { height: 150px; }
+  .cb-thumb-back { width: 60%; left: 4%; }
+  .cb-thumb-front { width: 60%; right: 4%; }
+}
+
 /* ── HUBSPOT FORM AREA ── */
 .cb-form-area {
   min-height: 300px;
@@ -288,6 +325,14 @@ src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
     </div>
 
     <h1 class="cb-title">AI活用事例集を<br>無料でお届けします</h1>
+
+    <!-- 事例集サムネイル -->
+    <div class="cb-thumbnails">
+      <div class="cb-thumb-stack">
+        <img src="casebook-cover.png" alt="職種別AI活用事例のご紹介" class="cb-thumb cb-thumb-back">
+        <img src="casebook-sample.png" alt="事例：月次決算のAI活用" class="cb-thumb cb-thumb-front">
+      </div>
+    </div>
 
     <p class="cb-desc">
       業種別・規模別のAI導入事例を多数掲載。<br>
