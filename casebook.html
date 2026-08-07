@@ -111,7 +111,6 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: 'DM Mono', monospace;
   font-size: 11px;
   font-weight: 500;
   color: var(--blue);
@@ -247,18 +246,19 @@ body {
   content: counter(cb-case);
   position: absolute;
   left: 0;
-  top: 7px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--navy-dark);
-  color: #fff;
+  background: #fff;
+  border: 1.5px solid var(--navy-dark);
+  color: #000;
   font-size: 10px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'DM Mono', monospace;
 }
 
 @media (max-width: 500px) {
@@ -333,7 +333,7 @@ body {
   flex: 1;
   min-width: 340px;
   position: sticky;
-  top: 32px;
+  top: 88px;
 }
 
 .cb-draft-flag {
@@ -367,6 +367,25 @@ body {
 /* ── HUBSPOT FORM AREA ── */
 .cb-form-area {
   min-height: 300px;
+}
+
+.cb-form-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cb-skel-line, .cb-skel-box, .cb-skel-btn {
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--border2) 25%, var(--accent-lt) 50%, var(--border2) 75%);
+  background-size: 400% 100%;
+  animation: cb-shimmer 1.4s ease-in-out infinite;
+}
+.cb-skel-line { height: 12px; margin-bottom: 2px; }
+.cb-skel-box { height: 40px; margin-bottom: 6px; }
+.cb-skel-btn { height: 44px; border-radius: 8px; margin-top: 8px; }
+@keyframes cb-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* HubSpot form style overrides */
@@ -438,7 +457,6 @@ body {
 .cb-fallback-note code {
   display: block;
   margin-top: 8px;
-  font-family: 'DM Mono', monospace;
   font-size: 12px;
   color: var(--blue);
 }
@@ -562,6 +580,15 @@ src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
 
         <!-- HubSpot Form -->
     <div class="cb-form-area" id="hubspotFormArea">
+      <div class="cb-form-skeleton" id="cbFormSkeleton">
+        <div class="cb-skel-line" style="width:40%"></div>
+        <div class="cb-skel-box"></div>
+        <div class="cb-skel-line" style="width:40%"></div>
+        <div class="cb-skel-box"></div>
+        <div class="cb-skel-line" style="width:55%"></div>
+        <div class="cb-skel-box"></div>
+        <div class="cb-skel-btn"></div>
+      </div>
       <div class="hs-form-frame" data-region="na2" data-form-id="a9b89c5a-0128-4daa-b87a-b1cbe6ea5419" data-portal-id="246440621"></div>
     </div>
       </div>
@@ -580,25 +607,30 @@ src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
 </footer>
 
 <script>
-// HubSpotの埋め込みスクリプトは重量級のサードパーティJSのため、
-// 初期表示（FCP/LCP/TBT）をブロックしないよう、ページ読み込み後に遅延読み込みする
+// このページは軽量なので、HubSpotの埋め込みスクリプトは
+// ページ読み込みを待たずすぐに読み込む（フォーム表示の体感速度を優先）
 (function() {
   function loadHubSpotEmbed() {
     if (document.getElementById('hsFormsEmbedScript')) return;
     var s = document.createElement('script');
     s.id = 'hsFormsEmbedScript';
     s.src = 'https://js-na2.hsforms.net/forms/embed/246440621.js';
-    s.defer = true;
+    s.async = true;
     document.body.appendChild(s);
   }
-  if ('requestIdleCallback' in window) {
-    window.addEventListener('load', function() {
-      requestIdleCallback(loadHubSpotEmbed, { timeout: 2000 });
+  loadHubSpotEmbed();
+
+  // hs-form-frame内にiframeが挿入されたらスケルトンを消す
+  var frameEl = document.querySelector('.hs-form-frame');
+  var skeletonEl = document.getElementById('cbFormSkeleton');
+  if (frameEl && skeletonEl && 'MutationObserver' in window) {
+    var mo = new MutationObserver(function() {
+      if (frameEl.querySelector('iframe')) {
+        skeletonEl.style.display = 'none';
+        mo.disconnect();
+      }
     });
-  } else {
-    window.addEventListener('load', function() {
-      setTimeout(loadHubSpotEmbed, 300);
-    });
+    mo.observe(frameEl, { childList: true, subtree: true });
   }
 })();
 </script>
