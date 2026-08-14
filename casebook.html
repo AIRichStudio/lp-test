@@ -100,7 +100,7 @@ body {
 }
 
 .cb-layout {
-  max-width: 1140px;
+  max-width: 1240px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -359,12 +359,20 @@ body {
 }
 
 @media (max-width: 900px) {
-  .cb-layout { flex-direction: column; gap: 40px; }
-  .cb-right { position: static; min-width: 0; }
+  .cb-layout { flex-direction: column; gap: 40px; align-items: stretch; }
+  .cb-right { position: static; min-width: 0; width: 100%; }
+  .cb-left { width: 100%; }
 }
 
 
 /* ── HUBSPOT FORM AREA ── */
+.cb-form-title {
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--navy-dark);
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
 .cb-form-area {
   min-height: 300px;
 }
@@ -480,11 +488,19 @@ body {
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
   .cb-card {
-    padding: 36px 24px;
+    padding: 24px 16px;
     border-radius: 16px;
   }
   .cb-title { font-size: 20px; }
-  .cb-main { padding: 32px 16px; }
+  .cb-main { padding: 32px 12px; }
+  .cb-form-title { font-size: 16px; margin-bottom: 14px; }
+  .cb-form-area .hs-form-field { margin-bottom: 12px; }
+  .cb-form-area .hs-form-field label { font-size: 12.5px !important; margin-bottom: 4px !important; }
+  .cb-form-area .hs-input { height: 44px !important; padding: 10px 12px !important; font-size: 14px !important; }
+  .cb-form-area .hs-submit { margin-top: 16px; }
+  .cb-form-area .hs-button { height: 48px !important; font-size: 14px !important; }
+  .cb-form-area { min-height: 0; }
+  .cb-form-area .hs-form .legal-consent-container { font-size: 11.5px !important; line-height: 1.5 !important; }
 }
 </style>
 <!-- Meta Pixel Code -->
@@ -521,7 +537,7 @@ src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
 
     <!-- LEFT: 説明文（仮） -->
     <div class="cb-left">
-      <div class="cb-eyebrow">AI活用事例集</div>
+      <div class="cb-eyebrow">AI活用事例集をダウンロード</div>
 
 <h2>現場でどのようにAIを活用できるのか<br>一目で分かります</h2>
 
@@ -537,41 +553,9 @@ src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
         分からず、社内で活用されていないケースは少なくありません。
       </p>
       <p>
-        多くの場合、ツールの使い方は分かっても、どの業務にどう組み込めば成果につながるのかが見えず、
-        結局一部の人しか使わないまま終わってしまいます。
+        本資料では、経理・人事・労務など幅広い業務のAI活用事例を紹介。<br>
+        自社に近い事例から、AIをどう運用すればよいかがすぐに分かります。
       </p>
-      <p>
-        本資料では、経理・人事・労務など幅広い業務におけるAI活用事例をピックアップし、
-        実際にどのような業務フローでAIを使い、どんな成果につながったのかを具体的に紹介しています。
-      </p>
-      <p>
-        自社の業務に近い事例を見つけることで、どのような設計でAIを運用すればよいかがすぐに分かります。
-      </p>
-
-      <h3>〈本資料で紹介する事例〉</h3>
-      <div class="cb-case-grid">
-        <ol class="cb-case-list">
-          <li>経理：月次決算業務</li>
-          <li>人事：採用面接の日程調整</li>
-          <li>広報：インタビュー記事の作成</li>
-          <li>営業：提案の骨子作り</li>
-          <li>営業：議事録から提案書の作成</li>
-        </ol>
-        <ol class="cb-case-list">
-          <li>デザイナー：資料構成の統一</li>
-          <li>全業種：タスク検知と通知</li>
-          <li>管理職：Slack対応とタスク管理</li>
-          <li>労務：給与計算チェック</li>
-          <li>労務：就業規則の法改正対応</li>
-        </ol>
-      </div>
-
-      <h3>資料に含まれる内容</h3>
-      <ul class="cb-plainlist">
-        <li>業種別・職種別のAI活用10事例</li>
-        <li>AI導入前後の課題と成果</li>
-        <li>AIによる自動化フローの具体例</li>
-      </ul>
 
       <h3>このような方におすすめです</h3>
       <ul class="cb-plainlist">
@@ -586,6 +570,7 @@ src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
       <div class="cb-card">
 
         <!-- HubSpot Form -->
+    <h2 class="cb-form-title">事例集ダウンロード</h2>
     <div class="cb-form-area" id="hubspotFormArea">
       <div class="cb-form-skeleton" id="cbFormSkeleton">
         <div class="cb-skel-line" style="width:40%"></div>
