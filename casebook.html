@@ -202,6 +202,12 @@ body {
   letter-spacing: -0.01em;
   margin-bottom: 24px;
 }
+.br-mobile { display: none; }
+.br-desktop { display: inline; }
+@media (max-width: 600px) {
+  .br-mobile { display: inline; }
+  .br-desktop { display: none; }
+}
 
 .cb-left p {
   font-size: 15px;
@@ -539,7 +545,7 @@ src="https://www.facebook.com/tr?id=1436797771804684&ev=PageView&noscript=1"
     <div class="cb-left">
       <div class="cb-eyebrow">AI活用事例集をダウンロード</div>
 
-<h2>現場でどのようにAIを活用できるのか<br>一目で分かります</h2>
+<h2>現場でどのようにAIを活用<br class="br-mobile">できるのか<br class="br-desktop">一目で分かります</h2>
 
         <div class="cb-thumbnails">
           <div class="cb-thumb-stack">
